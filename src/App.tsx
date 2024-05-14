@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 
-const useImageURL = () => {
+/*const useImageURL = () => {
   const [imageURL, setImageURL] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -58,6 +58,24 @@ function App() {
       </>
     )
   )
+}*/
+
+const App = () => {
+const [heading, setHeading] = useState ("Defaul state");
+
+const clickHandler = () => {
+  setHeading("New text !!")
+};
+
+return(
+  <>
+  <button type='button' onClick={clickHandler}>
+    Click me!!
+  </button>
+  <h1>{heading}</h1>
+  </>
+);
 }
+
 
 export default App
